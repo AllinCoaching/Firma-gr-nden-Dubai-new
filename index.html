@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dubai Firmengründung</title>
+<title>Road to Dubai Consulting</title>
 
 <style>
 body {
@@ -14,10 +14,21 @@ body {
   text-align: center;
 }
 
-.hero-img {
+.hero {
+  position: relative;
+}
+
+.hero img {
   width: 100%;
-  height: 240px;
+  height: 250px;
   object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 120px;
 }
 
 .container {
@@ -26,35 +37,9 @@ body {
   margin: auto;
 }
 
-h1 {
-  font-size: 30px;
-  margin-top: 10px;
-}
-
-h2 {
-  margin-top: 40px;
-}
-
-p {
-  color: #cbd5f5;
-  line-height: 1.6;
-}
-
-.highlight {
-  color: #22c55e;
-  font-weight: bold;
-}
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 15px 0;
-}
-
 .button {
   display: block;
-  margin: 20px 0;
+  margin: 15px 0;
   padding: 15px;
   border-radius: 10px;
   text-decoration: none;
@@ -63,117 +48,110 @@ p {
   color: white;
 }
 
-.badge {
-  display: inline-block;
-  background: linear-gradient(90deg,#d4af37,#facc15);
-  color: black;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  margin: 15px 0;
+.choice {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.packages {
+  display: none;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 </style>
+
+<script>
+function showPackages(type) {
+  document.getElementById("ohne").style.display = "none";
+  document.getElementById("mit").style.display = "none";
+  document.getElementById(type).style.display = "block";
+}
+</script>
+
 </head>
 
 <body>
 
-<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c" class="hero-img">
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+<img src="DEIN_LOGO_HIER.png" class="logo">
+</div>
 
 <div class="container">
 
 <h1>0% Steuern. Mehr Freiheit.<br>Firma in Dubai gründen.</h1>
 
-<div class="badge">✔ Geprüfter Service</div>
-
-<p>🇩🇪 Deutschsprachiges Team direkt vor Ort in Dubai</p>
-
-<p class="highlight">
-Starte dein Business in Dubai – schnell, legal und ohne Bürokratie.
-</p>
-
-<p>
-Mit der richtigen Strategie bist du in wenigen Tagen startklar – inklusive Unterstützung vor Ort.
-</p>
+<p>🇩🇪 Deutschsprachiges Team vor Ort</p>
 
 <a href="https://wa.me/4916015933555" class="button">
-📱 Kostenloses Erstgespräch sichern
+📱 Kostenloses Erstgespräch
 </a>
-
-<h2>Was du bekommst</h2>
-
-<div class="card">
-<p>✔ Firmengründung in Dubai</p>
-<p>✔ Unterstützung bei allen Behördengängen</p>
-<p>✔ Steueroptimierte Struktur</p>
-<p>✔ Persönliche Begleitung</p>
-</div>
 
 <h2>Wähle deinen Weg</h2>
 
+<div class="choice" onclick="showPackages('ohne')">
+🌍 Ohne Auswandern
+</div>
+
+<div class="choice" onclick="showPackages('mit')">
+🏙 Mit Auswandern
+</div>
+
+<!-- OHNE AUSWANDERN -->
+<div id="ohne" class="packages">
+
+<h2>Pakete ohne Auswandern</h2>
+
 <div class="card">
-<h3>🌍 Ohne Auswandern</h3>
-<p>
-Nutze die Steuervorteile von Dubai und bleibe flexibel in deinem Heimatland.
-</p>
+<h3>Basic – ab 4.250€</h3>
+<p>✔ Firmengründung<br>✔ Anleitung<br>✔ Selbst umsetzen</p>
 </div>
 
 <div class="card">
-<h3>🏙 Mit Auswandern</h3>
-<p>
-Baue dir ein neues Leben in Dubai auf – mit maximaler Freiheit und neuen Möglichkeiten.
-</p>
+<h3>Standard – ab 7.490€</h3>
+<p>✔ Alles aus Basic<br>✔ Mehr Unterstützung<br>✔ Struktur & Strategie</p>
 </div>
 
-<h2>Warum jetzt starten?</h2>
+<div class="card">
+<h3>Premium – ab 11.490€</h3>
+<p>✔ Full Service<br>✔ Alles wird für dich erledigt<br>✔ VIP Betreuung</p>
+</div>
+
+</div>
+
+<!-- MIT AUSWANDERN -->
+<div id="mit" class="packages">
+
+<h2>Pakete mit Auswandern</h2>
 
 <div class="card">
-<p>✔ Jeder Monat kostet dich unnötig Geld</p>
-<p>✔ Steuervorteile nutzen, solange es möglich ist</p>
-<p>✔ Früh starten = langfristig profitieren</p>
+<h3>Basic – ab 4.250€</h3>
+<p>✔ Firmengründung<br>✔ Anleitung zum Umzug</p>
+</div>
+
+<div class="card">
+<h3>Standard – ab 7.490€</h3>
+<p>✔ Unterstützung vor Ort<br>✔ Beratung + Struktur</p>
+</div>
+
+<div class="card">
+<h3>Premium – ab 11.490€</h3>
+<p>✔ Komplettes Setup<br>✔ Begleitung in Dubai<br>✔ Alles organisiert</p>
+</div>
+
 </div>
 
 <a href="https://wa.me/4916015933555" class="button">
-🚀 Jetzt kostenlos beraten lassen
+🚀 Jetzt starten
 </a>
-
-<div class="badge">★ Premium Beratung – 100% unverbindlich</div>
-
-<h2>Kundenbewertungen</h2>
-
-<div class="card">
-<p>⭐⭐⭐⭐⭐</p>
-<p><b>„Schnell, professionell und unkompliziert.“</b></p>
-<p>
-Ich hätte nie gedacht, dass die Firmengründung so einfach sein kann. Alles wurde für mich organisiert.
-</p>
-<p style="color:#94a3b8;">– Michael K.</p>
-</div>
-
-<div class="card">
-<p>⭐⭐⭐⭐⭐</p>
-<p><b>„Top Betreuung von Anfang bis Ende.“</b></p>
-<p>
-Das deutschsprachige Team vor Ort hat mir extrem geholfen. Klare Empfehlung!
-</p>
-<p style="color:#94a3b8;">– Daniel S.</p>
-</div>
-
-<div class="card">
-<p>⭐⭐⭐⭐⭐</p>
-<p><b>„Endlich steuerlich optimal aufgestellt.“</b></p>
-<p>
-Ich spare jetzt jeden Monat Geld und habe endlich eine klare Struktur für mein Business.
-</p>
-<p style="color:#94a3b8;">– Kevin M.</p>
-</div>
-
-<h2>Warum wir?</h2>
-
-<div class="card">
-<p>✔ Mehrjährige Erfahrung im Aufbau von Unternehmen in Dubai</p>
-<p>✔ Deutschsprachige Betreuung vor Ort</p>
-<p>✔ Klare, einfache Prozesse ohne Stress</p>
-</div>
 
 </div>
 
